@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Newsletter - Learnlab Education</title>
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+        <link rel="stylesheet" type="text/css" href="../css/newsletter.css">
+        <link rel="icon" type="image/x-icon" href="../images/favicon/favicon.ico">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,100;1,300;1,400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <header>
+            <a href="../index.html" class="logo"><img src="../images/logo1.png" alt="logo"></a>
+            <div class="navigation">
+                <div class="navilist">
+                    <ul>
+                            <li><a href="../index.html">HOME</a></li>
+                            <li><a href="#">PROGRAMS</a>
+                            <div class="dropdowncontent">
+                                <ul>
+                                    <li><a href="ForCompanies.html">FOR COMPANIES</a></li>
+                                    <li><a href="forschools.html">FOR SCHOOLS</a></li>
+                                    <li><a href="certifications.html">CERTIFICATIONS</a></li>
+                                </ul>
+                            </div></li>
+                            <li><a href="#">EXPLORE</a>
+                                <div class="dropdowncontent">
+                                    <ul>
+                                        <li><a href="research.html">RESEARCH</a></li>
+                                        <li><a href="impact.html">IMPACT</a></li>
+                                        <li><a href="annual report.html">ANNUAL REPORT</a></li>
+                                    </ul>
+                                </div></li></li>
+                            <li><a href="#">ABOUT</a>
+                                <div class="dropdowncontent">
+                                    <ul>
+                                        <li><a href="about.html">ABOUT US</a></li>
+                                        <li><a href="team.html">TEAM</a></li>
+                                        <li><a href="contact.html">CONTACT</a></li>
+                                        <li><a href="careers.html">CAREERS</a></li>
+                                    </ul>
+                                </div></li></li>
+                            <li><a href="blogmain.html">blog</a></li>
+                            <li><a class="lastitem" href="#">newsletter</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <div class="main">
+            <h2>Newsletter</h2>
+            <p>Sign up for our newsletter and we'll send you news and upcoming events every two weeks. </p>
+        </div>
+        <h4>PLEASE COMPLETE THE FORM BELOW</h4>
+        <div class="newsform">
+            <h3>Subscribe</h3>
+            <div>
+                <span><label>First Name</label><label class="small2"><small><strong style="color: red;">*</strong> indicate required</small></label></span><br>
+                <input type="text"><br><br>
+                <label>Last Name</label><br>
+                <input type="text"><br><br>
+                <label>Email Address <span style="color:red; font-weight:bolder;">*</span></label><br>
+                <input type="email" id="emailid" onclick="checkemail()">
+                <p id="pid"></p><br>
+                <div class="check">
+                    <label style="font-weight:bolder">Affiliation</label>
+                    <label><input type="checkbox">Educator</label>
+                    <label><input type="checkbox">Entrepreneur</label>
+                    <label><input type="checkbox">Parent</label>
+                    <label><input type="checkbox">Nonprofit Community</label>
+                    <label><input type="checkbox">Philanthropist</label>
+                    <label><input type="checkbox">Venture Capital</label>
+                    <label><input type="checkbox">General</label>
+                </div>
+                <input type="submit" value="Subscribe" onclick="return checkemail()">
+            </div>
+        </div>
+        <footer>
+            <div class="social">
+                  <a href="https://twitter.com/LEANLABed" class="fab fa-twitter"></a>
+                  <a href="http://www.linkedin.com/company/leanlabeducation" class="fab fa-linkedin"></a>
+                  <a href="https://www.facebook.com/leanlabeducation" class="fab fa-facebook-f"></a>
+                  <a href="https://medium.com/the-lean-lab" class="fab fa-leanpub"></a>
+            </div>
+            <div class="part2">
+                  <div class="others">
+                      <ul>
+                          <li><a href="https://www.leanlabeducation.org/donate">DONATE</a></li>
+                          <li><a href="about.html">ABOUT</a></li>
+                          <li><a href="blogmain.html">BLOG</a></li>
+                          <li><a href="careers.html">CAREERS</a></li>
+                          <li><a href="https://www.leanlabeducation.org/search">SEARCH</a></li>
+                          <li><a href="contact.html">CONTACT</a></li>
+                      </ul>
+                  </div>
+                  <div class="lastline">
+                      <P><a href="https://www.leanlabeducation.org/terms-conditions">Terms</a> | <a href="https://www.leanlabeducation.org/privacy"> Privacy</a> | &copy; Copyright 2022 LEARNLAB Education</P>
+                  </div>
+            </div>
+          </footer>
+
+          <script>
+            function checkemail() {
+                const massage = document.getElementById("pid");
+                massage.innerHTML="";
+                let emailid = document.getElementById("emailid").value;
+                try {
+                    if (emailid == "") throw "This field is requird.";
+                }
+                catch(err) {
+                    massage.innerHTML = err;
+                    document.getElementById('emailid').style.border = "2px solid red";
+                }
+                finally {
+                    document.getElementById("emailid").value="";
+                }
+            }
+   
+          </script>
+    </body>
+</html>

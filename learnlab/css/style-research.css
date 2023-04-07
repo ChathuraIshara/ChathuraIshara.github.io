@@ -1,0 +1,91 @@
+
+.head1{
+    font-size: 30px;
+    color: #2c2b47;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;   
+    text-align: center;
+}
+.head2{
+    font-size: 20px;
+    color: #2c2b47;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-decoration: underline;
+    text-align: center;
+}
+.td1{
+    font-weight: 100;
+    font-size: 18px;
+    padding-top: 30px;
+    text-align: center;
+}
+.td2{
+    font-size: 19px;
+    padding-top: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+.imcard:hover{
+    transform: scale(1.1);
+}
+.td3{
+    font-weight: 100;
+    font-size: 18px;
+    padding-top: 30px;
+    text-align: center  
+}
+.td4{
+    font-size: 19px;
+    padding-top: 20px;
+    text-align: center;
+    font-weight: bold; 
+}
+.head3{
+    font-size: 20px;
+    color: #2c2b47;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-decoration: underline;
+    text-align: center; 
+}
+.para{
+    font-size: 19px;
+    color: #2c2b47;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    font-weight: 300;
+}
+.td5{
+    font-weight: 100;
+    font-size: 18px;
+    padding-top: 30px;
+    text-align: center   
+}
+.td6{
+    font-size: 19px;
+    padding-top: 20px;
+    text-align: center;
+    font-weight: bold;   
+}
+.box3{
+    display: flex;
+    align-items: center;
+}
+.image-9{
+    flex-basis: 40%;
+    padding-left: 150px;
+}
+.para2{
+    font-size: 19px;
+    color: #2c2b47;
+    font-weight: 300;
+}
+hr {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+tr th,tr td {
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+

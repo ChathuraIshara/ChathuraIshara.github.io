@@ -1,0 +1,108 @@
+
+.LEANLABBLOG{
+    text-align: center;
+    color: rgb(26, 26, 61);
+    font-size:70px;
+    font-weight:bold;
+}
+hr{
+    size:1px;
+    color:rgb(21, 41, 41);
+    width:100%;
+}
+.FEATURED{
+    color:black;
+    font-size:15px;
+}
+.tablefamily td {
+    text-align: center;
+    padding:0 30px;
+}
+.PRESENTE{
+    color:black;
+    font-size:30px;
+    cursor: pointer;
+}
+.education{
+    color:black;
+    font-size:10px;
+    cursor: pointer;
+}
+.text{
+    font-style:italic;
+    text-align: center;
+    font-weight: bold;
+}
+table,th,td{
+    border:10px solid white;
+    border-collapse:collapse;  
+}
+th{
+    text-align: left;
+    font-size:30px;
+}
+td{
+    font-size:20px;
+    cursor: pointer;
+}
+.most{
+    font-size: 15px;
+}
+td{
+    font-size: 15px;
+}
+td:hover{
+    color: red;
+}
+.education:hover{
+ color:red;
+}
+.PRESENTE:hover{
+    color:red; 
+}
+.box{
+    margin: 90px;
+}
+.topic{
+    font-size: 30px;
+    font-weight: bold;
+    color: red;
+}
+.picture{
+    width:300;
+    height: 200;
+}
+.button{
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px ;
+    background: rgb(239, 77, 87);
+    border-radius: 46px;
+    color: #fff;
+    text-align: center;
+    margin-left: 480px;
+    margin-right: 480px;
+    cursor: pointer;
+    
+}
+ 
+.button:hover{
+  background-color: rgb(241, 116, 116);
+}
+.search{
+    float:right;
+    margin-top: 90px;
+    padding: 10px;
+    
+}
+.picture1{
+    width: 800px;
+}
+.picture2{
+    width:250;
+    height: 150;
+}
+.responsive{
+    width: 100%;
+    height: auto;
+}

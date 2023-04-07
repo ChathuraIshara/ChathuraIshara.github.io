@@ -1,0 +1,74 @@
+.main {
+    padding: 100px 350px;
+    word-spacing: normal;
+    padding-bottom: 50px;
+}
+.main h2 {
+    font-size: 3em;
+    color: #3a3960;
+    padding-bottom: 10px;
+}
+.main p {
+    font-weight: lighter;
+    font-size: 19px;
+    line-height: 35px;
+    color: rgba(0, 0, 0, 0.9,);
+}
+h4 {
+    padding-left: 350px;
+    color: #3a3960;
+}
+.newsform {
+    padding-left: 360px;
+    padding-top: 40px;
+}
+.newsform h3 {
+    font-weight: bolder;
+    color: #3a3960;
+    padding-bottom: 30px;
+}
+input[type=text], input[type=email] {
+    width: 60%;
+    padding: 10px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+span {
+    display: inline-block;
+}
+span .small2 {
+    padding-left: 420px;
+    font-size: small;
+}
+.small2 strong {
+    font-size: 16px;
+}
+.check label {
+    display: block;
+    padding:2px 0;
+}
+input[type=submit] {
+    margin: 20px 0;
+    padding: 8px 20px;
+    background-color: rgb(177, 170, 170);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    margin-bottom: 150px;
+    cursor: pointer;
+}
+input[type=submit]:hover {
+    background-color: rgb(63, 62, 62);
+}
+input[type=email] {
+    margin-bottom: 0;
+}
+#pid {
+    margin-top: 0;
+    color: red;
+    font-size: small;
+    padding-left: 10px;
+}

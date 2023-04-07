@@ -1,0 +1,177 @@
+.home {
+    position: inherit;
+    text-align: center;
+    color: white;
+}
+.maintext {
+    position: absolute;
+    font-size: 2.5em;
+    top: 20%;
+    bottom: 15%;
+    left: 10%;
+    right: 10%;
+    font-weight: bolder;
+}
+.maintext strong {
+    font-weight: bolder;
+}
+.home img {
+    width: 100%;
+    height: 350px;
+}
+.content {
+    text-align: center;
+    display: flex;
+    color: #3a3960;
+    padding: 80px 150px;
+    word-spacing: 10px;
+}
+.content img {
+    padding-right: 10px;
+}
+.content .description {
+    text-align: left;
+}
+.content h2 {
+    padding-bottom: 20px;
+    font-weight: bolder;
+    font-size: 2.5em;
+}
+.content p {
+    font-size: 27px;
+    font-weight: bolder;
+}
+button {
+    border: 2px solid rgba(0, 0, 0, 0.9);
+    padding: 20px 25px;
+    font-weight: lighter;
+    background-color: white;
+    margin-top: 20px;
+    font-size:small;
+    width: 150px;
+    height: 60px;
+}
+button a {
+    text-decoration: none;
+    color:black;
+    font-weight: 500;
+}
+button:hover {
+    cursor: pointer;
+    background-color:black;
+}
+button:hover a {
+    color: white;
+}
+hr {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.grid .gridcontainer,.blog .blogcontainer {
+    display: flex;
+    padding:20px 200px;
+    justify-content: center;
+    justify-items: center;
+}
+.gridcontainer .box,.blog .blogbox {
+    padding:15px;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    margin: 15px;
+}
+.box img {
+    width: 350px;
+    height: 200px;
+}
+.box img,.box h3,.box p{
+    padding-top: 25px;
+}
+.box p {
+    line-height: 30px;
+    letter-spacing: 1px;
+    font-weight: lighter;
+    color: rgba(0, 0, 0, 0.9);
+}
+.box h3 {
+    color: red;
+}
+.another {
+    position: relative;
+    text-align: center;
+    color: white;
+    padding: 50px 0;
+    background-image: url(../images/homepage/group.png);
+    background-position: center;
+    background-size: cover;
+    height: 300px;
+    font-weight: bolder;
+}
+.another h1 {
+    text-align: center;
+    color: white;
+    font-size:5em;
+    font-weight: bolder;
+    margin: 20px 200px;
+}
+.low {
+    text-align: center;
+}
+.low h4 {
+    font-size: 1.9em;
+    padding: 60px 150px;
+    padding-bottom: 25px;
+    color: #3a3960;
+    line-height: 40px;
+}
+.low p {
+    font-weight: lighter;
+    font-size: 17px;
+    padding: 0 350px;
+    line-height: 35px;
+    color: rgba(0, 0, 0, 0.9,);
+}
+.but {
+    text-align: center;
+    justify-content: center;
+    padding-bottom: 150px;
+}
+.but button:not(:last-child) {
+    margin-right: 80px;
+}
+.blogbox img {
+    width: 390px;
+    height: 200px;
+}
+.blogbox h3 a {
+    text-decoration: none;
+    color: black;
+}
+.blogbox h3 {
+    padding: 0 10px;
+    text-align: left;
+}
+.blogbox p {
+    text-align: left;
+    color: rgba(0, 0, 0, 0.842);
+    padding-left: 10px;
+    font-size: x-small;
+}
+.blogbox a:hover {
+    color: red;
+}
+.slide {
+    text-align: right;
+    margin-right: 50px;
+    font-size: 20px;
+}
+.slide .fas {
+    width: 50px;
+    cursor: pointer;
+    justify-content: space-between;
+    width: 20px;
+}
+.blogbox p:hover {
+    color: rgb(223, 132, 147);
+}

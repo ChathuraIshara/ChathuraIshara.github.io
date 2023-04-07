@@ -1,0 +1,282 @@
+
+#container
+{
+    background-color:azure;
+    margin:10px auto;
+    width:100%;
+
+}
+#logo
+{
+    width: 80px;
+    height: 80px;
+    padding-right:570px;
+  
+}
+#header
+{
+    display:flex;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 175px;
+    
+}
+#name
+{
+    font-size: 38px;
+
+}
+
+#navigation {
+    
+    margin:0;
+    padding:0;
+    width: 100%;
+    height: 65px;
+    background-color: rgb(191, 188, 188);
+    float:left;
+   
+}
+#navigation ul li{
+    display:inline;
+}
+#navigation li a
+{
+    float:left;
+    display:block;
+    color:black;
+    text-align:center;
+    padding:10px 16px;
+    text-decoration: none;
+}
+
+#navigation li a:hover:not(.active){
+    background-color:rgb(30, 32, 27);
+    color:white;
+}
+#navigation li a.active
+{
+    background-color: rgb(55, 56, 69);
+    color:white;
+}
+#content
+{
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   
+}
+#welcome2
+{
+    width: 600px;
+    height: 600px;
+    border-radius: 25px;
+    
+    
+}
+#selection
+{
+    
+    display: flex;
+}
+#selectionright
+{
+    margin-left: 50px;
+    width: 700px;
+    font-size: 35px;
+    font-weight:100;
+    color:lightslategrey;
+    font-family:sans-serif;
+    text-align: center;
+   
+   
+}
+footer
+{
+    background-color: rgb(41, 45, 44);
+    padding:10px;
+    height: 400px;
+}
+#fimage
+{
+    border-radius: 25px;
+    height:80px;
+    width:80px
+}
+#fdesc
+{
+    margin-top:0;
+    padding:25px;
+    color:grey;
+    width: 300px;
+    font-size: 18px;
+}
+#fimgname
+{
+    display: flex;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top:25px;
+    padding-bottom:1px;
+    margin-bottom:-1em;
+}
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+   
+  }
+  
+  .fa:hover {
+      opacity: 0.7;
+  }
+  
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  
+  .fa-linkedin {
+    background: #007bb5;
+    color: white;
+  }
+  
+  .fa-youtube {
+    background: #bb0000;
+    color: white;
+  }
+  
+  .fa-instagram {
+    background: #125688;
+    color: white;
+  }
+  #social
+  {
+    display: flex;
+    padding-left:25px;
+  }
+  #footercol
+  {
+    display:flex;
+  }
+  #useful
+  {
+    padding-left:100px;
+    padding-top:25px;
+   
+  }
+  #links
+  {
+    font-size: 18px;
+    color:grey;
+    text-decoration: none;
+  }
+#seeyou
+{
+    background-size: cover;
+    height: 800px;
+    width: 100%;
+}
+#seeyoutext
+{
+    text-align: center;
+    font-size: 75px;
+    color:white;
+    padding-top:50px;
+
+}
+
+#desc
+{
+    font-size: 22px;
+    color:grey;
+    
+}
+#deschead
+{
+    font-size: 35px;
+   
+}
+#demo
+{
+    margin:25px;
+   
+}
+#demo1
+{
+    margin:25px;
+    width: 50%;
+    display: flex;
+}
+#desc1
+{
+    font-size: 22px;
+    color:grey;
+   
+    
+}
+#map
+{
+    height: 300px;
+    width: 700px;
+    margin-left: 50px;
+}
+#tb
+{
+    margin:25px;
+}
+#bottomcontact
+{
+    display:flex;
+
+    
+
+}
+#formcontact
+{
+    background-color:rgba(170, 248, 248,0.4);
+    width: 550px;
+    border-radius: 10px;
+    color:darkgrey;
+    /* padding:25px; */
+
+}
+#formhead
+{
+    color:rgba(228, 27, 77, 0.682);
+    padding-bottom:30px;
+    
+}
+#sendus
+{
+    width: 200px;
+    height: 40px;
+    background-color: rgb(153, 138, 121);
+    border:none;
+    color:white;
+}
+#sendus:hover
+{
+    color:white;
+    background-color:black;
+}
+#formstyle
+{
+    padding:25px;
+}
+#inputs
+{
+    padding-bottom: 25px;
+}
+#formimg
+{
+    padding-left: 150px;
+    border-radius: 10px;
+
+}

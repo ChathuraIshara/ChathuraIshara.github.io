@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <link rel="stylesheet" type="text/css" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        #content{
+            background-image: url(loginimg.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 1000px;
+            padding:100px;
+        }
+        #quote
+        {
+            text-align: center;
+            font-size: 45px;
+            color:rgb(0, 0, 0);
+            font-weight: 600;
+        }
+        #intro{
+            font-size: 25px;
+        }
+        #dem
+        {
+            font-size: 25px;
+        }
+        #login
+        {
+            width: 600px;
+            height: 300px;
+            border-radius: 25px;
+            background-color:rgba(156, 225, 202, 0.764);
+            margin-top:100px;
+             margin-left:400px; 
+            padding:25px;
+           
+            
+        }
+        #sendus
+{
+    width: 150px;
+    height: 40px;
+    background-color: rgb(221, 152, 75);
+    border:none;
+    color:white;
+}
+#sendus:hover
+{
+    color:white;
+    background-color:black;
+}
+
+
+    </style>
+    <script>
+        function passwordvalidate(password)
+        {
+            if(password.length<7 || password.length>12)
+            {
+                    alert("Password length should be 7 to 12!");
+                    return false;
+            }
+
+        }
+        function validateForm(frm)
+        {
+            var username=frm.name.value;
+            var password=frm.password.value;
+            var a=true;
+            var b=true;
+            var final=false;
+            if(username == "" || password == "")
+            {
+                alert("There are empty values.please fill this!");
+                a=false;
+                return false;
+
+            }
+            if(passwordvalidate(password) == false)
+            {
+                b=false;
+                return false;
+
+            }
+            if(a==true && b == true)
+            {
+                final=true;
+            }
+            return final;
+            
+        }
+    </script>
+</head>
+<body>
+    <div id="header">
+        <img id="logo" src="logo.jfif" alt="LOGO">
+        <h1 id="name">THE WISDOM SCHOOL</h1>
+  </div>  
+  <div id="navigation">
+      <ul>
+          <li><a  href="index.html">HOME</a></li>
+          <li><a href="regform.html">REGISTRATION</a></li>
+          <li><a class="active" href="login.html">LOGIN</a></li>
+          <li><a href="#">LOGOUT</a></li>
+          <li><a  href="about.html">ABOUT</a></li>
+      </ul>
+     
+
+     
+  </div>
+  <div id="content">
+  <div id="login">
+   <form action="#" onsubmit="return validateForm(this)" style="display:flex;justify-content: center;">
+    <div style="margin:20px">
+    <table>
+        <tr>
+            <td style="font-size:45px;">User-Name:</td>
+            <td><input type="text" name="name" style="height: 30px;" ></td>
+        </tr>
+        <br><br>
+        <tr>
+            <td style="font-size:45px;">Password:</td>
+            <td><input type="password" name="password" style="height: 30px;"></td>
+        </tr>
+        <tr >
+            
+            <td colspan="2" align="center">
+                <button  id="sendus" onclick="return validateForm(frm)">LOG-IN</button>
+            </td>
+          
+        </tr>
+    </table>
+</div>
+
+
+   </form>
+
+  </div>
+  </div>
+  <footer>
+    <div id="footercol">
+      <div>
+      <div id="fimgname">
+          <img id="fimage" src="logo.jfif">
+          <h1 style="padding-left: 10px;font-family: Arial, Helvetica, sans-serif;color:white">WISDOM</h1>
+      </div>
+      <div id="fdesc">
+          <p>A WISOOM is an establishment that provides paid lodging on a short-term basis.Facilities provided inside a school may range from a modest-quality class rooms to large suites with bigger, higher-quality beds. </p>
+      </div>
+      <div id="social">
+          <a href="#" class="fa fa-facebook"></a>
+          <a href="#" class="fa fa-twitter"></a>
+          <a href="#" class="fa fa-instagram"></a>
+          <a href="#" class="fa fa-youtube"></a>
+      </div>
+      </div>
+      <div id="useful">
+          <h1 style="color:white">Useful links</h1>
+          <a id="links" href="#">Blog</a><br><br>
+          <a id="links" href="#">Pricing</a><br><br>
+          <a id="links" href="#">E-learning</a><br><br>
+          <a id="links" href="#">Modules</a><br><br>
+          <a id="links" href="#">Customer service</a>
+      </div>
+      <div id="useful">
+          <h1 style="color:white">Guide and help</h1>
+          <a id="links" href="#">Care</a><br><br>
+          <a id="links" href="#">Privacy policy</a><br><br>
+          <a id="links" href="#">Terms and conditions</a><br><br>
+          <a id="links" href="#">Support</a><br><br>
+         
+      </div>
+      <div id="useful">
+          <h1 style="color:white">Contact & Support</h1>
+          <a id="links" href="#"><i class="fa fa-phone" style="font-size:24px"></i>+47 45 80 80</a><br>
+          <a id="links" href="#"><i class="fa fa-comments-o" style="font-size:24px"></i>Live chat</a><br>
+          <a id="links" href="#"><i class="fa fa-envelope" style="font-size:24px"></i>Contact us</a><br>
+          <a id="links" href="#"><i class="fa fa-star" style="font-size:24px"></i>Give feedback</a><br><br>
+         
+      </div>
+  </div> 
+  </footer> 
+ 
+</body>
+</html>

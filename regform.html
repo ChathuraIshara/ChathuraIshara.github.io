@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Registration Form</title>
+<link rel="stylesheet" type="text/css" href="regstyle.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+#sendus
+{
+    width: 150px;
+    height: 40px;
+    background-color: rgb(221, 152, 75);
+    border:none;
+    color:white;
+}
+#sendus:hover
+{
+    color:white;
+    background-color:black;
+}
+   div.background {
+  background: url(back.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 1000px;
+  padding:100px;
+}
+
+div.transbox {
+  margin: auto;
+  background-color: #ffffff;
+  opacity: 0.9;
+  width: 60%;
+  border: 3px solid #5d6157;
+  padding: 10px;
+  height: 70%;
+  color:rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: 25px;
+  border-radius: 25px;
+ 
+}
+
+div.transbox p {
+  margin: 5%;
+  font-weight: bold;
+  color: #0b0b0b;
+  
+  
+}
+</style>
+<script type="text/javascript">
+    function useridValidate(userid)
+    {
+        var size=userid.length;
+        if(size<5 || size>12)
+        {
+            alert("User Id must be of length 5 to 12");
+            return false;
+           
+           
+        }
+        else{
+            return true;
+           
+        }
+    }
+    function passwordValidate(password)
+    {
+        var size=password.length;
+        if(size<7 || size>12)
+        {
+            alert("User Id must be of length 7 to 12");
+            return false;
+            
+            
+        }
+        else{
+            return true;
+           
+        }
+    }
+    function nameValidate(name)
+    {
+        var reg=/^[A-Za-z]+$/;
+        if(name.match(reg))
+        {
+            return true;
+        }
+        else{
+            alert("Name must be alphabets only!");
+            return false;
+        }
+    }
+    function countryValidate(country)
+    {
+        if(country == "Default")
+        {
+            alert("Please select a Country!");
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+    function emailValidate(email)
+        {
+            var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+            if(reg.test(email) == false)
+            {
+                alert("Invalid email!");
+                return false;
+            }
+            else{
+                return true;
+               
+            }
+        }
+        function genderValidate(sex)
+        {
+            var x=0;
+            if(sex[0].checked)
+            {
+                x++;
+            }
+            else if(sex[1].checked)
+            {
+                x++;
+            }
+            if(x == 0)
+            {
+                alert("Please select your Gender!");
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+        function languageValidate(language)
+        {
+            var x=0;
+            var languages=document.getElementsByName("language[]");
+            for(var i=0;i<languages.length;i++)
+            {
+                if(languages[i].checked)
+                {
+                    x++;
+                }
+            }
+            if(x==0)
+            {
+                alert("Please select your Langage!");
+                return false;
+            }
+            else{
+                return true;
+            }
+
+        }
+        function validateForm(frm)
+        {
+            var userid=frm.userid.value;
+            var password=frm.password.value;
+            var name=frm.name.value;
+            var country=frm.country.value;
+            var email=frm.email.value;
+            var gender=frm.gender;
+            var language=frm.language;
+
+
+            var a=true;
+            var b=true;
+            var c=true;
+            var d=true;
+            var e=true;
+            var f=true;
+            var g=true;
+            var h=true;
+
+
+
+            var final=false;
+
+            if(userid == "" || password == "" || name == "" || email == "")
+            {
+                a=false;
+                alert("There empty values.Please Fill them!");
+                return false;
+            }
+            if(useridValidate(userid) == false)
+            {
+                b=false;
+                return false;
+            }
+            if(passwordValidate(password) == false)
+            {
+                c=false;
+                return false;
+            }
+            if(nameValidate(name) == false)
+            {
+                d=false;
+                return false;
+            }
+            if(emailValidate(email) == false)
+            {
+                e=false;
+                return false;
+            }
+            if(countryValidate(country) == false)
+            {
+                f=false;
+                return false;
+            }
+            if(genderValidate(gender) == false)
+            {
+                g=false;
+                return false;
+            }
+            if(languageValidate(language)==false)
+            {
+                h=false;
+                return false;
+            }
+            if(a == true && b == true && c == true && d == true && e == true && f == true && g == true && h == true)
+            {
+                final=true;
+
+            }
+            return final;
+            
+        }
+    
+</script>
+</head>
+<body>
+  </div>
+    <div id="header">
+        <img id="logo" src="logo.jfif" alt="LOGO">
+        <h1 id="name">THE WISDOM SCHOOL</h1>
+  </div>  
+  <div id="navigation">
+      <ul>
+          <li><a  href="index.html">HOME</a></li>
+          <li><a class="active" href="regform.html">REGISTRATION</a></li>
+          <li><a href="login.html">LOGIN</a></li>
+          <li><a href="#">LOGOUT</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+      </ul>
+  </div> 
+    <div class="background">
+        <div class="transbox">
+            <h1 style="text-align: center;color:rgb(11, 12, 12)">Registration Form</h1>
+            <form name="frm"  onsubmit="return validateForm(this)">
+                <table align="center">
+                    <tr>
+                        <td>User Id:</td>
+                        <td><input type="text" name="userid"></td>   
+                    </tr>
+                    <tr>
+                        <td>Password:</td>
+                        <td><input type="password" name="password"></td>   
+                    </tr>
+                    <tr>
+                        <td>Name:</td>
+                        <td><input type="text" name="name"></td>   
+                    </tr>
+                    <tr>
+                        <td>Address:</td>
+                        <td><input type="text" name="address"></td>   
+                    </tr>
+                    <tr>
+                        <td>Country</td>
+                        <td><select name="country">
+                            <option value="Default">(Please select a country)</option>
+                            <option value="canada">Canada</option>
+                            <option value="India">India</option>
+                            <option value="USA">USA</option>
+        
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td>Zip Code:</td>
+                        <td><input type="text" name="zipcode"></td>   
+                    </tr>
+                    <tr>
+                        <td>Email:</td>
+                        <td><input type="email" name="email"></td>
+                    </tr>
+                    <tr>
+                        <td>Sex:</td>
+                        <td><input type="radio" name="gender" value="Male"> Male
+                        <input type="radio" name="gender" value="Female"> Female</td>
+                    </tr>
+                    <tr>
+                        <td>Language:</td>
+                        <td><input type="checkbox" name="language[]" value="English"> English
+                        <input type="checkbox" name="language[]" value="Non English"> Non English</td>
+                    </tr>
+                   
+                    <tr>
+                        <td>About:</td>
+                        <td><textarea rows="10" cols="40" name="about" style="resize:none"></textarea></td>
+                    </tr>
+                         
+                    <tr>
+                        <td></td>
+                        <td style="padding-left: 80px;">
+                            <button id="sendus" onclick="return validateForm(frm)">Submit</button>
+                            <!-- <input type="submit" value="Submit"> -->
+        
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+
+    </div>
+    <footer>
+        <div id="footercol">
+          <div>
+          <div id="fimgname">
+              <img id="fimage" src="logo.jfif">
+              <h1 style="padding-left: 10px;font-family: Arial, Helvetica, sans-serif;color:white">WISDOM</h1>
+          </div>
+          <div id="fdesc">
+              <p>A WISOOM is an establishment that provides paid lodging on a short-term basis.Facilities provided inside a school may range from a modest-quality class rooms to large suites with bigger, higher-quality beds. </p>
+          </div>
+          <div id="social">
+              <a href="#" class="fa fa-facebook"></a>
+              <a href="#" class="fa fa-twitter"></a>
+              <a href="#" class="fa fa-instagram"></a>
+              <a href="#" class="fa fa-youtube"></a>
+          </div>
+          </div>
+          <div id="useful">
+              <h1 style="color:white">Useful links</h1>
+              <a id="links" href="#">Blog</a><br><br>
+              <a id="links" href="#">Pricing</a><br><br>
+              <a id="links" href="#">E-learning</a><br><br>
+              <a id="links" href="#">Modules</a><br><br>
+              <a id="links" href="#">Customer service</a>
+          </div>
+          <div id="useful">
+              <h1 style="color:white">Guide and help</h1>
+              <a id="links" href="#">Care</a><br><br>
+              <a id="links" href="#">Privacy policy</a><br><br>
+              <a id="links" href="#">Terms and conditions</a><br><br>
+              <a id="links" href="#">Support</a><br><br>
+             
+          </div>
+          <div id="useful">
+              <h1 style="color:white">Contact & Support</h1>
+              <a id="links" href="#"><i class="fa fa-phone" style="font-size:24px"></i>+47 45 80 80</a><br>
+              <a id="links" href="#"><i class="fa fa-comments-o" style="font-size:24px"></i>Live chat</a><br>
+              <a id="links" href="#"><i class="fa fa-envelope" style="font-size:24px"></i>Contact us</a><br>
+              <a id="links" href="#"><i class="fa fa-star" style="font-size:24px"></i>Give feedback</a><br><br>
+             
+          </div>
+      </div> 
+      </footer>
+
+</body>
+
+
+</html>

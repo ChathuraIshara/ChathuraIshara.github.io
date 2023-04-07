@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Registration Form</title>
+<style>
+#sendus
+{
+    width: 150px;
+    height: 40px;
+    background-color: rgb(221, 152, 75);
+    border:none;
+    color:white;
+}
+#sendus:hover
+{
+    color:white;
+    background-color:black;
+}
+   div.background {
+  background: url(def.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 1000px;
+  padding:100px;
+}
+
+div.transbox {
+  margin: auto;
+  background-color: #ffffff;
+  opacity: 0.7;
+  width: 60%;
+  border: 3px solid #5d6157;
+  padding: 10px;
+  height: 70%;
+  color:rgba(48, 37, 54, 0.815);
+  font-weight: bold;
+  font-size: 25px;
+  border-radius: 25px;
+ 
+}
+
+div.transbox p {
+  margin: 5%;
+  font-weight: bold;
+  color: #0b0b0b;
+  
+  
+}
+</style>
+<script type="text/javascript">
+    function useridValidate(userid)
+    {
+        var size=userid.length;
+        if(size<5 || size>12)
+        {
+            alert("User Id must be of length 5 to 12");
+            return false;
+           
+           
+        }
+        else{
+            return true;
+           
+        }
+    }
+    function passwordValidate(password)
+    {
+        var size=password.length;
+        if(size<7 || size>12)
+        {
+            alert("User Id must be of length 7 to 12");
+            return false;
+            
+            
+        }
+        else{
+            return true;
+           
+        }
+    }
+    function nameValidate(name)
+    {
+        var reg=/^[A-Za-z]+$/;
+        if(name.match(reg))
+        {
+            return true;
+        }
+        else{
+            alert("Name must be alphabets only!");
+            return false;
+        }
+    }
+    function countryValidate(country)
+    {
+        if(country == "Default")
+        {
+            alert("Please select a Country!");
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+    function emailValidate(email)
+        {
+            var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+            if(reg.test(email))
+            {
+                return true;
+            }
+            else{
+                alert("Invalid email!")
+                return false;
+            }
+        }
+        function genderValidate(sex)
+        {
+            var x=0;
+            if(sex[0].checked)
+            {
+                x++;
+            }
+            else if(sex[1].checked)
+            {
+                x++;
+            }
+            if(x == 0)
+            {
+                alert("Please select your Gender!");
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+        // function languageValidate(language)
+        // {
+        //     var x=0;
+        //     var languages=document.getElementsByName("language[]");
+        //     for(var i=0;i<languages.length;i++)
+        //     {
+        //         if(languages[i].checked)
+        //         {
+        //             x++;
+        //         }
+        //     }
+        //     if(x==0)
+        //     {
+        //         alert("Please select your Langage!");
+        //         return false;
+        //     }
+        //     else{
+        //         return true;
+        //     }
+
+        // }
+        function validateForm(frm)
+        {
+            var userid=frm.userid.value;
+            var password=frm.password.value;
+            var name=frm.name.value;
+            var country=frm.country.value;
+            var email=frm.email.value;
+            var gender=frm.gender;
+           // var language=frm.language;
+            var a=true;
+            var b=true;
+            var c=true;
+            var d=true;
+            var e=true;
+            var f=true;
+
+
+
+            var final=false;
+
+            if(userid == "" || password == "" || name == "" || email == "")
+            {
+                a=false;
+                return false;
+            }
+            if(useridValidate(userid) == false)
+            {
+                b=false;
+                return false;
+            }
+            if(passwordValidate(password) == false)
+            {
+                c=false;
+                return false;
+            }
+            if(nameValidate(name) == false)
+            {
+                d=false;
+                return false;
+            }
+            if(countryValidate(country) == false)
+            {
+                e=false;
+                return false;
+            }
+            // if(languageValidate(language)==false)
+            // {
+            //     f=false;
+            //     return false;
+            // }
+            if(a == true && b == true && c == true && d == true && e == true)
+            {
+                final=true;
+
+            }
+            return final;
+            
+        }
+    
+</script>
+</head>
+<body>
+    
+            <h1 style="text-align: center;color:rgb(11, 12, 12)">Registration Form</h1>
+            <form name="frm"  onsubmit="return validateForm(this)">
+                <table align="center">
+                    <tr>
+                        <td>User Id:</td>
+                        <td><input type="text" name="userid"></td>   
+                    </tr>
+                    <tr>
+                        <td>Password:</td>
+                        <td><input type="password" name="password"></td>   
+                    </tr>
+                    <tr>
+                        <td>Name:</td>
+                        <td><input type="text" name="name"></td>   
+                    </tr>
+                    <tr>
+                        <td>Address:</td>
+                        <td><input type="text" name="address"></td>   
+                    </tr>
+                    <tr>
+                        <td>Country</td>
+                        <td><select name="country">
+                            <option value="Default">(Please select a country)</option>
+                            <option value="canada">Canada</option>
+                            <option value="India">India</option>
+                            <option value="USA">USA</option>
+        
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td>Zip Code:</td>
+                        <td><input type="text" name="zipcode"></td>   
+                    </tr>
+                    <tr>
+                        <td>Email:</td>
+                        <td><input type="email" name="email"></td>
+                    </tr>
+                    <tr>
+                        <td>Sex:</td>
+                        <td><input type="radio" name="gender" value="Male"> Male
+                        <input type="radio" name="gender" value="Female"> Female</td>
+                    </tr>
+                    <tr>
+                        <td>Language:</td>
+                        <td><input type="checkbox" name="language[]" value="English"> English
+                        <input type="checkbox" name="language[]" value="Non English"> Non English</td>
+                    </tr>
+                   
+                    <tr>
+                        <td>About:</td>
+                        <td><textarea rows="10" cols="40" name="about" style="resize:none"></textarea></td>
+                    </tr>
+                         
+                    <tr>
+                        <td></td>
+                        <td style="padding-left: 80px;">
+                            <!-- <button id="sendus">Submit</button> -->
+                            <input type="submit" value="Submit">
+        
+                        </td>
+                    </tr>
+                </table>
+            </form>
+      
+
+</body>
+
+
+</html>
